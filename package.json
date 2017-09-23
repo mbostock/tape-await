@@ -1,0 +1,26 @@
+{
+  "name": "tape-await",
+  "version": "0.0.0",
+  "description": "Yet another async-await helper for tape.",
+  "keywords": [
+    "tape",
+    "async",
+    "promise"
+  ],
+  "license": "ISC",
+  "author": {
+    "name": "Mike Bostock",
+    "url": "https://bost.ocks.org/mike"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mbostock/tape-await.git"
+  },
+  "main": "index",
+  "scripts": {
+    "test": "tape test.js"
+  },
+  "dependencies": {
+    "tape": "4"
+  }
+}
