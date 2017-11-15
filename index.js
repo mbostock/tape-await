@@ -25,4 +25,7 @@ tape.only = function(description, run) {
   return _.only(description, wrap(run));
 };
 
+tape.Test = _.Test;
+tape.createHarness = _.createHarness;
+
 module.exports = tape;
