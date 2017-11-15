@@ -20,7 +20,10 @@
   "scripts": {
     "test": "tape test.js"
   },
-  "dependencies": {
+  "devDependencies": {
+    "tape": "4"
+  },
+  "peerDependencies": {
     "tape": "4"
   }
 }
