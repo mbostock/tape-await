@@ -1,6 +1,6 @@
 {
   "name": "tape-await",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Yet another async-await helper for tape.",
   "keywords": [
     "tape",
