@@ -21,6 +21,7 @@
     "test": "tape test.js"
   },
   "dependencies": {
-    "tape": "4"
+    "tape": "4",
+    "deep-eql": "3"
   }
 }
