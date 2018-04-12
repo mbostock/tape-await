@@ -2,14 +2,12 @@ var _ = require("tape");
 
 function wrap(run) {
   return function(test) {
-    try {
-      Promise.resolve(run(test)).then(
-        function() { test.end(); },
-        function(error) { test.end(error || new Error("rejected")); }
-      );
-    } catch (error) {
-      test.end(error);
-    }
+    new Promise(function(resolve) {
+      resolve(run(test));
+    }).then(
+      function() { test.end(); },
+      function(error) { test.end(error || new Error("rejected")); }
+    );
   };
 }
 
