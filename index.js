@@ -15,6 +15,8 @@ function tape(description, run) {
   return _(description, wrap(run));
 };
 
+Object.assign(tape, _);
+
 tape.skip = function(description, run) {
   return _.skip(description, wrap(run));
 };
@@ -22,8 +24,5 @@ tape.skip = function(description, run) {
 tape.only = function(description, run) {
   return _.only(description, wrap(run));
 };
-
-tape.Test = _.Test;
-tape.createHarness = _.createHarness;
 
 module.exports = tape;

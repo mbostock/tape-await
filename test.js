@@ -22,3 +22,7 @@ tape.skip("an unsuccessful asynchronous test fails", function(test) {
     setTimeout(reject, 250);
   });
 });
+
+tape("exports other tape methods", function(test) {
+  test.equal(typeof tape.onFinish, "function");
+});
