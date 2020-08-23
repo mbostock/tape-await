@@ -25,4 +25,19 @@ tape("promises are great", async test => {
 });
 ```
 
+To use, require tape-await instead of tape:
+
+```js
+const tape = require("tape-await");
+```
+
+And in your package.json:
+
+```json
+  "devDependencies": {
+    "tape": "4",
+    "tape-await": "0.1"
+  }
+```
+
 This module is similar to [tape-async](https://www.npmjs.org/package/tape-async), [tape-promise](https://www.npmjs.org/package/tape-promise), and [blue-tape](https://www.npmjs.org/package/blue-tape). One difference is that it *also* provides implicit *test*.end for synchronous tests, rather than only providing it for asynchronous tests. Another is that it correctly handles rejected promises with falsey values, such as `Promise.reject()`. Also, it only supports promises and not generators, and does not attempt to deal with unhandled promise rejections or uncaught exceptions.
